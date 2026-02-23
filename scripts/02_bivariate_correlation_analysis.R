@@ -8,7 +8,7 @@ library(ggrepel)
 library(broom)
 
 # Load the merged data
-merged <- read_csv("/home/stefano/Documents/github-projects/oecd-ai-welfare-analysis/data-source/merged_data.csv")
+merged <- read_csv("/data-source/merged_data.csv")
 
 
 # Drop entries that are missing one or more information 
@@ -88,7 +88,7 @@ cor_wide <- cor_results %>%
   select(rtm_var, inst_var, display) %>%
   pivot_wider(names_from = inst_var, values_from = display)
 
-write_csv(cor_results, "/home/stefano/Documents/github-projects/oecd-ai-welfare-analysis/output/correlation_results.csv")
+write_csv(cor_results, "/output/correlation_results.csv")
 
 print(cor_wide, n = Inf)
 
@@ -119,7 +119,7 @@ p1 <- ggplot(merged, aes(x = .data[[strongest$inst_var]],
   ) +
   theme_minimal(base_size = 13)
 
-ggsave("/home/stefano/Documents/github-projects/oecd-ai-welfare-analysis/output/plot_strongest_bivariate.png", p1, width = 10, height = 7, dpi = 150)
+ggsave("/output/plot_strongest_bivariate.png", p1, width = 10, height = 7, dpi = 150)
 cat("\n✓ Saved: output/plot_strongest_bivariate.png\n")
 
 
@@ -150,5 +150,5 @@ p_combined <- plots_strongest_inst_compare[[1]] + plots_strongest_inst_compare[[
     subtitle = "Each point = one country. Line = OLS fit with 95% CI."
   )
 
-ggsave("/home/stefano/Documents/github-projects/oecd-ai-welfare-analysis/output//plot_threat_robot_vs_institutions.png", p_combined, width = 15, height = 5, dpi = 150)
-cat("✓ Saved: output/plot_threat_robot_vs_institutions.png\n")
+ggsave("/output//plot_threat_robot_vs_institutions.png", p_combined, width = 15, height = 5, dpi = 150)
+cat("✓ Saved: output/plot_worklife_balance_vs_institutions.png\n")
