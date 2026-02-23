@@ -13,9 +13,9 @@ This question is motivated by comparative welfare state research (Esping-Anderse
 | File | Source | Description |
 |------|--------|-------------|
 | `1-2024-RTM.xlsx` | [OECD Risks That Matter 2024](https://www.oecd.org/en/about/programmes/oecd-risks-that-matter-rtm-survey.html) | Digitalisation perceptions: 9 survey items across 27 countries |
-| `2-ICTWSS.csv` | [ICTWSS Database v2]([https://www.oecd.org/en/data/datasets/ictwss-database.html](https://www.oecd.org/en/data/datasets/oecdaias-ictwss-database.html)) | Union density (% of employees who are trade union members) |
-| `3-OECD-EPL.csv` | [OECD Employment Protection Database](https://www.oecd.org/en/data/datasets/oecd-indicators-of-employment-protection.html) | Employment Protection Legislation index (0–6 scale, Version 4) |
-| `4-OECD_SOCX.csv` | [OECD Social Expenditure Database](https://www.oecd.org/en/data/datasets/social-expenditure-database-socx.html) | Public social expenditure as % of GDP |
+| `2-ICTWSS.csv` | [ICTWSS Database v2](https://www.oecd.org/en/data/datasets/oecdaias-ictwss-database.html) | Union density (% of employees who are trade union members) |
+| `3-OECD-EPL.csv` | [OECD Employment Protection Database](https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_EPL%40DF_EPL&df[ag]=OECD.ELS.JAI&dq=A..EPL_OV..VERSION4&pd=2000%2C&to[TIME_PERIOD]=false) | Employment Protection Legislation index (0–6 scale, Version 4) |
+| `4-OECD_SOCX.csv` | [OECD Social Expenditure Database](https://data-explorer.oecd.org/vis?fs[0]=Topic%2C1%7CSociety%23SOC%23%7CSocial%20policy%23SOC_PRO%23&pg=0&fc=Topic&bp=true&snb=12&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_SOCX_AGG%40DF_SOCX_AGG&df[ag]=OECD.ELS.SPD&df[vs]=1.0&dq=.A..PT_B1GQ.ES10._T._T.&pd=2010%2C&to[TIME_PERIOD]=false) | Public social expenditure as % of GDP |
 
 The dependent variables are split into two conceptual groups:
 - **Threat perceptions** (6 items): job replaced by robot, AI, platform worker, foreign worker; job offshored; skills obsolescence
