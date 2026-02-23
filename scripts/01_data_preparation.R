@@ -12,7 +12,7 @@ library(ggrepel)      # Smart label placement on plots (avoids overlapping text)
 
 # Data loading
 rtm_raw <- read_excel(
-  "/home/stefano/Documents/github-projects/oecd-ai-welfare-analysis/data-source/1-2024-RTM.xlsx",
+  "/data-source/1-2024-RTM.xlsx",
   sheet = "g1.5",
   range = "F33:O60",       # Columns F (country names) through O (last variable) selection of the columns that matter to the analysis
   col_names = FALSE        # blank names so I can set custom names below
@@ -52,7 +52,7 @@ colnames(rtm_raw) <- c(
 # Measure: "Individual and collective dismissals (regular contracts)"
 # Available years: 2013-2019
 
-epl_raw <- read_csv("/home/stefano/Documents/github-projects/oecd-ai-welfare-analysis/data-source/3-OECD-EPL.csv")
+epl_raw <- read_csv("/data-source/3-OECD-EPL.csv")
 
 # The OECD data explorer format has many metadata columns. I only need three:
 # REF_AREA (country ISO3 code), TIME_PERIOD (year), OBS_VALUE (the actual number)
@@ -71,7 +71,7 @@ epl <- epl_raw %>%
 # Unit: Public social expenditure as % of GDP
 # Available years: 2010-2024
 
-socx_raw <- read_csv("/home/stefano/Documents/github-projects/oecd-ai-welfare-analysis/data-source/4-OECD_SOCX.csv")
+socx_raw <- read_csv("/data-source/4-OECD_SOCX.csv")
 
 socx <- socx_raw %>%
   select(iso3 = REF_AREA, year = TIME_PERIOD, socx = OBS_VALUE) %>%
@@ -93,7 +93,7 @@ print(socx)
 # Unit: % of employees who are trade union members
 # Available years: varies wildly by country (some up to 2024, some stop in 1980s)
 
-ictwss_raw <- read_csv("/home/stefano/Documents/github-projects/oecd-ai-welfare-analysis/data-source/2-ICTWSS.csv")
+ictwss_raw <- read_csv("/data-source/2-ICTWSS.csv")
 
 
 ud <- ictwss_raw %>%
@@ -188,7 +188,7 @@ print(filter(merged, ud_data_old == TRUE) %>% select(country, ud, ud_year))
 
 # save to file for analysis in the next script
 
-write_csv(merged, "/home/stefano/Documents/github-projects/oecd-ai-welfare-analysis/data-source/merged_data.csv")
+write_csv(merged, "/data-source/merged_data.csv")
 
 cat("\n✓ Merged dataset saved to data/merged_data.csv\n")
 cat("\nFull merged dataset:\n")
