@@ -4,9 +4,7 @@ A cross-national analysis of how welfare state institutions shape citizens' perc
 
 ## Research Question
 
-Do the institutional characteristics of a country's welfare state — social spending, employment protection, and labour organisation — predict how citizens perceive the impact of digitalisation on their working lives?
-
-This question is motivated by comparative welfare state research (Esping-Andersen, 1990) and the growing literature on how institutional contexts mediate the social impact of AI and automation. If institutions matter, the same technology should provoke different responses depending on a country's welfare regime.
+Do the institutional characteristics of a country's welfare state (social spending, employment protection, and labour organisation) predict how citizens perceive the impact of digitalisation on their working lives?
 
 ## Data
 
